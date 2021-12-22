@@ -1,20 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import TopBarNavigator from './Navigators/TopBarNavigator';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Header from './components/header';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello, Kat and Nolan</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <Header/>
+      <TopBarNavigator/>
+    </SafeAreaProvider>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};
