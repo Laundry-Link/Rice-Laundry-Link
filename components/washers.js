@@ -1,106 +1,133 @@
-import React from 'react';
-import { View, StyleSheet, Alert, Button, Text } from 'react-native';
-import { DataTable } from 'react-native-paper';
-import StartButton from './button'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import React from "react";
+import {
+  View,
+  StyleSheet,
+  Alert,
+  Button,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
+import { DataTable } from "react-native-paper";
+import StartButton from "./button";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Washer() {
-    return (
+  return (
+    <ScrollView>
       <View style={styles.container}>
         <DataTable>
-  
-          <DataTable.Row>
+          <DataTable.Row style={styles.table}>
             <DataTable.Cell>
-            <MaterialCommunityIcons name="washing-machine" size={30} color="black" />
-            <Text style={styles.title}>
-                Washer 1 
-            </Text>
-            
+              <MaterialCommunityIcons
+                name="washing-machine"
+                size={30}
+                color="black"
+              />
+              <Text style={styles.title}>{' '}Washer 1</Text>
             </DataTable.Cell>
-            <DataTable.Cell style = {styles.start}>
-                <StartButton/>
+            <DataTable.Cell style={styles.start}>
+              <StartButton />
             </DataTable.Cell>
           </DataTable.Row>
-  
-          <DataTable.Row>
+
+          <DataTable.Row style={styles.table}>
             <DataTable.Cell>
-            <MaterialCommunityIcons name="washing-machine" size={30} color="black" />
-            <Text style={styles.title}>
-                Washer 2 
-            </Text>
-            
+              <MaterialCommunityIcons
+                name="washing-machine"
+                size={30}
+                color="black"
+              />
+              <Text style={styles.title}>{' '}Washer 2</Text>
             </DataTable.Cell>
-            <DataTable.Cell style = {styles.start}>
-                <StartButton/>
+            <DataTable.Cell style={styles.start}>
+              <StartButton />
             </DataTable.Cell>
           </DataTable.Row>
-  
-          <DataTable.Row>
+
+          <DataTable.Row style={styles.table}>
             <DataTable.Cell>
-            <MaterialCommunityIcons name="washing-machine" size={30} color="black" />
-            <Text style={styles.title}>
-                Washer 3 
-            </Text>
-            
+              <MaterialCommunityIcons
+                name="washing-machine"
+                size={30}
+                color="black"
+              />
+              <Text style={styles.title}>{' '}Washer 3</Text>
             </DataTable.Cell>
-            <DataTable.Cell style = {styles.start}>
-                <StartButton/>
+            <DataTable.Cell style={styles.start}>
+              <StartButton />
             </DataTable.Cell>
           </DataTable.Row>
-  
-          <DataTable.Row>
+
+          <DataTable.Row style={styles.table}>
             <DataTable.Cell>
-            <MaterialCommunityIcons name="washing-machine" size={30} color="black" />
-            <Text style={styles.title}>
-                Washer 4 
-            </Text>
-            
+              <MaterialCommunityIcons
+                name="washing-machine"
+                size={30}
+                color="black"
+              />
+              <Text style={styles.title}>{' '}Washer 4</Text>
             </DataTable.Cell>
-            <DataTable.Cell style = {styles.start}>
-                <StartButton/>
+            <DataTable.Cell style={styles.start}>
+              <StartButton />
             </DataTable.Cell>
           </DataTable.Row>
-  
-          <DataTable.Row>
+
+          <DataTable.Row style={styles.table}>
             <DataTable.Cell>
-            <MaterialCommunityIcons name="washing-machine" size={30} color="black" />
-            <Text style={styles.title}>
-                Washer 5 
-            </Text>
-            
+              <MaterialCommunityIcons
+                name="washing-machine"
+                size={30}
+                color="black"
+              />
+              <Text style={styles.title}>{' '}Washer 5</Text>
             </DataTable.Cell>
-            <DataTable.Cell style = {styles.start}>
-                <StartButton/>
+            <DataTable.Cell style={styles.start}>
+              <StartButton />
             </DataTable.Cell>
           </DataTable.Row>
-  
-          <DataTable.Row>
+
+          <DataTable.Row style={styles.table}>
             <DataTable.Cell>
-            <MaterialCommunityIcons name="washing-machine" size={30} color="black" />
-            <Text style={styles.title}>
-                Washer 6 
-            </Text>
-            
+              <MaterialCommunityIcons
+                name="washing-machine"
+                size={30}
+                color="black"
+              />
+              <Text style={styles.title}>{' '}Washer 6</Text>
             </DataTable.Cell>
-            <DataTable.Cell style = {styles.start}>
-                <StartButton/>
+            <DataTable.Cell style={styles.start}>
+              <StartButton/>
             </DataTable.Cell>
           </DataTable.Row>
-  
         </DataTable>
       </View>
-    );
-  }
-  
-  const styles = StyleSheet.create({
-    container: {
-      paddingTop: 15,
-      paddingHorizontal: 20,
-    },
-    title: {
-        fontSize: 25
-    },
-    start: {
-        justifyContent: 'flex-end'
-    },
-  });
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 15,
+    paddingHorizontal: 10,
+  },
+  title: {
+    fontSize: 25,
+    fontFamily: "Avenir",
+    fontWeight: "bold",
+  },
+  startText: {
+    color: "#FFFFFF",
+  },
+  start: {
+    justifyContent: "flex-end",
+
+  },
+  wholebutton: {
+    alignItems: 'center',
+  },
+  table: {
+    marginBottom: 15,
+    justifyContent: 'space-between'
+  },
+});
