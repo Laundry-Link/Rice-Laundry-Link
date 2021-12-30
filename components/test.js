@@ -24,7 +24,7 @@ export default function Test() {
     var sec = 1;
     return (
       <View style = {{flexDirection:'row',alignItems:'flex-end',}}>
-        <TouchableOpacity activeOpacity = {1} onPress={onPressStart} style = {styles.resetButton}>
+        <TouchableOpacity onPress={onPressStart} style = {styles.resetButton}>
             <Entypo
                 name="back-in-time"
                 size={26}
@@ -32,7 +32,7 @@ export default function Test() {
               />
         </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity = {1} style={styles.startBackground}>
+        <TouchableOpacity style={styles.startBackground}>
           <CountDown
             until={5 * sec}
             style={styles.buttonStyle}

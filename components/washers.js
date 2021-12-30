@@ -11,6 +11,8 @@ import {
 import { DataTable } from "react-native-paper";
 import StartButton from "./button";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Timer from './timer'
+import Test from './test'
 
 export default function Washer() {
   return (
@@ -27,10 +29,10 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 1</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton />
+              <Timer />
             </DataTable.Cell>
           </DataTable.Row>
-
+            
           <DataTable.Row style={styles.table}>
             <DataTable.Cell>
               <MaterialCommunityIcons
@@ -41,7 +43,7 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 2</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton />
+              <Timer />
             </DataTable.Cell>
           </DataTable.Row>
 
@@ -105,7 +107,6 @@ export default function Washer() {
     </ScrollView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     paddingTop: 15,

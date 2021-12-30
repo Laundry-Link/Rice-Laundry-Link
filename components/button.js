@@ -13,6 +13,7 @@ import Timer from './timer'
 
 // export default function StartButton() {
 //   return <Button title="Start" onPress={() => Alert.alert("PRESSED")} />;
+// /(message = "Stop!")
 // };
 
 export default function StartButton() {
@@ -20,7 +21,7 @@ export default function StartButton() {
   //Alert.alert("Timer Started! 😘")
   return (
     <View>
-        <TouchableOpacity onPress={() => (message = "Stop!")} style={styles.startBackground}>
+        <TouchableOpacity onPress={() => <Timer />} style={styles.startBackground}>
             <Text style={styles.startText}>{message} </Text>
         </TouchableOpacity>
     </View>

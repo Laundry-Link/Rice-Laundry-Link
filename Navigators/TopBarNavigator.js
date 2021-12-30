@@ -3,8 +3,9 @@ import { Text, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Washer from "/Users/jessickmon/Documents/GitHub/Rice-Laundry-Link/components/washers.js";
-import Dryer from "/Users/jessickmon/Documents/GitHub/Rice-Laundry-Link/components/dryers.js";
+import Washer from "../components/washers.js";
+import Dryer from "../components/dryers.js";
+import Test from "../components/test.js";
 
 function Washers() {
   return <Washer />;
@@ -49,6 +50,11 @@ function MyTabs() {
         name="Chat"
         component={Chat}
         options={{ tabBarLabel: "Chat" }}
+      />
+      <Tab.Screen
+        name="Test"
+        component={Test}
+        options={{ tabBarLabel: "Test" }}
       />
     </Tab.Navigator>
   );
