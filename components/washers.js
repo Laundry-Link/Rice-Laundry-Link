@@ -57,7 +57,7 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 3</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton />
+              <Timer />
             </DataTable.Cell>
           </DataTable.Row>
 
