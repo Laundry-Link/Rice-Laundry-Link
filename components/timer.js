@@ -5,36 +5,36 @@ import Timer from "./timer";
 import CountDown from "react-native-countdown-component";
 import { Entypo } from "@expo/vector-icons";
 
-export default function Test() {
-  const [open, SetStart] = useState(true);
+export default function Test(props) {
+  const [count, SetStart] = useState(0);
   const onPressStart = () => {
-    SetStart(!open);
+    SetStart(count => count + 1);
   };
-  if (open) {
+  if (count % 2 == 0) {
     return (
-      <View style = {{flexDirection:'row',alignItems:'flex-end',}}>
-            <TouchableOpacity style = {styles.blankButton}>
-            </TouchableOpacity>
+      <View style={{ flexDirection: 'row', alignItems: 'flex-end', }}>
+        <TouchableOpacity style={styles.blankButton}>
+        </TouchableOpacity>
         <TouchableOpacity onPress={onPressStart} style={styles.startBackground}>
           <Text style={styles.startText}>{"Start!"} </Text>
         </TouchableOpacity>
       </View>
     );
   } else {
-    var sec = 1;
+    var sec = props.time
     return (
-      <View style = {{flexDirection:'row',alignItems:'flex-end',}}>
-        <TouchableOpacity activeOpacity = {1} onPress={onPressStart} style = {styles.resetButton}>
-            <Entypo
-                name="back-in-time"
-                size={26}
-                color="black"
-              />
+      <View style={{ flexDirection: 'row', alignItems: 'flex-end', }}>
+        <TouchableOpacity activeOpacity={1} onPress={onPressStart} style={styles.resetButton}>
+          <Entypo
+            name="back-in-time"
+            size={26}
+            color="black"
+          />
         </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity = {1} style={styles.startBackground}>
+        <TouchableOpacity activeOpacity={1} style={styles.startBackground}>
           <CountDown
-            until={5 * sec}
+            until={sec}
             style={styles.buttonStyle}
             digitStyle={{ backgroundColor: "#00205B" }}
             digitTxtStyle={{ color: "#FFFFFF" }}

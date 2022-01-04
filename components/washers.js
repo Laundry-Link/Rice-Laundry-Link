@@ -29,10 +29,10 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 1</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <Timer />
+              <Timer time={5} />
             </DataTable.Cell>
           </DataTable.Row>
-            
+
           <DataTable.Row style={styles.table}>
             <DataTable.Cell>
               <MaterialCommunityIcons
@@ -43,7 +43,7 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 2</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <Timer />
+              <Timer time={30} />
             </DataTable.Cell>
           </DataTable.Row>
 
@@ -57,7 +57,11 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 3</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton />
+<<<<<<< HEAD
+              <Timer time={30} />
+=======
+              <Timer />
+>>>>>>> 16eb20ef43d8e5bfaf4ed8f4f51adc1e6d4f969c
             </DataTable.Cell>
           </DataTable.Row>
 
@@ -71,7 +75,7 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 4</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton />
+              <Timer time={30} />
             </DataTable.Cell>
           </DataTable.Row>
 
@@ -85,7 +89,7 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 5</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton />
+              <Timer time={30} />
             </DataTable.Cell>
           </DataTable.Row>
 
@@ -99,7 +103,7 @@ export default function Washer() {
               <Text style={styles.title}>{' '}Washer 6</Text>
             </DataTable.Cell>
             <DataTable.Cell style={styles.start}>
-              <StartButton/>
+              <Timer time={30} />
             </DataTable.Cell>
           </DataTable.Row>
         </DataTable>
